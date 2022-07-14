@@ -1,9 +1,8 @@
-package com.example.weatherphoto.data.network
+package com.example.news_feeds.data.network
 
 import com.example.news_feeds.data.model.ArticlesResponse
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface NetworkServices {
 

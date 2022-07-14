@@ -6,21 +6,21 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.example.Articles
+import com.example.example.Article
 import com.example.news_feeds.R
 import com.example.news_feeds.databinding.ItemArticleBinding
-import java.text.SimpleDateFormat
+import com.example.news_feeds.domain.util.Util
 
 
 class ArticlesAdapter(
-    private var articlesList: MutableList<Articles>,
-    private val itemClick: (Articles) -> Unit,
+    private var articlesList: MutableList<Article>,
+    private val itemClick: (Article) -> Unit,
 ) :
     RecyclerView.Adapter<ArticlesAdapter.ViewHolder>() {
     private lateinit var context: Context
 
     @SuppressLint("NotifyDataSetChanged")
-    fun changeList(newList: MutableList<Articles>) {
+    fun changeList(newList: MutableList<Article>) {
         articlesList.clear()
         articlesList = newList
         notifyDataSetChanged()
@@ -37,19 +37,15 @@ class ArticlesAdapter(
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.view.publishByTextView.text = articlesList[position].author
+        holder.view.authorByTextView.text =
+            context.getString(R.string.by) + articlesList[position].author
 
-       // val format = SimpleDateFormat("MMMM d ,yyyy")
-        val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+        holder.view.publishTimeTextView.text = Util.dateFormat(articlesList[position].publishedAt.toString())
 
-        val date = format.parse(articlesList[position].publishedAt.toString())
-
-        holder.view.publishTimeTextView.text = date?.toString()
-
-        holder.view.titleTextView.text =
-            context.getString(R.string.by) + articlesList[position].title
+        holder.view.titleTextView.text = articlesList[position].title
         Glide.with(holder.view.articleCompatImageView.context)
             .load(articlesList[position].urlToImage)
+            .placeholder(R.drawable.placeholder)
             .into(holder.view.articleCompatImageView)
 
         holder.view.mainContainerConstraintLayout.setOnClickListener {

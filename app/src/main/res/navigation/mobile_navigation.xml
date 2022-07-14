@@ -8,7 +8,28 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.news_feeds.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_articleDetialsFragment"
+            app:destination="@id/articleDetialsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetialsFragment"
+        android:name="com.example.news_feeds.ui.details.ArticleDetailsFragment"
+        android:label="@string/app_name" >
+        <argument
+            android:name="articleDetails"
+            app:argType="com.example.example.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/noConnectionFragment"
+        android:name="com.example.weatherphoto.ui.main.NoConnectionFragment"
+        android:label="@string/no_connection" />
 
 </navigation>

@@ -1,6 +1,6 @@
 package com.example.news_feeds.data.repository
 
-import com.example.weatherphoto.data.network.NetworkServices
+import com.example.news_feeds.data.network.NetworkServices
 import javax.inject.Inject
 
 class ArticlesRepository @Inject constructor(private val networkServices: NetworkServices) :

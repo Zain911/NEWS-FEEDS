@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "apiKey", '"6c3ac21db3144e28a3a0ecd81fe46b45"'
+        buildConfigField "String", "apiKey", '"533af958594143758318137469b41ba9"'
         buildConfigField "String", "BaseUrl", '"https://newsapi.org/v1/"'
     }
 
@@ -56,11 +56,6 @@ dependencies {
     //Hilt
     implementation 'com.google.dagger:hilt-android:2.42'
     kapt 'com.google.dagger:hilt-compiler:2.42'
-
-    //Room
-    implementation "androidx.room:room-ktx:2.4.2"
-    kapt "androidx.room:room-compiler:2.4.2"
-    androidTestImplementation "androidx.room:room-testing:2.4.2"
 
     //Lottie Animation
     implementation 'com.airbnb.android:lottie:5.0.2'

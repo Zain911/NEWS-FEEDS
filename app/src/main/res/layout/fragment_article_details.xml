@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:layout_margin="20dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+        app:layout_constraintBottom_toTopOf="@+id/openWebsiteCompatButton"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.Guideline
@@ -49,20 +49,20 @@
             tools:text="@string/lorem" />
 
         <TextView
-            android:id="@+id/publishByTextView"
+            android:id="@+id/authorByTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingStart="4dp"
             android:paddingTop="8dp"
             android:paddingEnd="4dp"
             android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/publishAtTextView"
             app:layout_constraintStart_toStartOf="@+id/titleTextView"
             app:layout_constraintTop_toBottomOf="@+id/titleTextView"
             tools:text="by walidzain.com" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/publishAtTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -81,16 +81,18 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/articleCompatImageView"
-            app:layout_constraintTop_toBottomOf="@+id/publishByTextView"
+            app:layout_constraintTop_toBottomOf="@+id/authorByTextView"
             tools:text="@string/lorem_description" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/openWebsiteCompatButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
         android:text="@string/open_website"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:layout_margin="20dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent" />

@@ -20,5 +20,7 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="lorem_description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="open_website">Open Website</string>
-    <string name="by">\"By \"</string>
+    <string name="by">By </string>
+    <string name="no_connection">No Connection</string>
+    <string name="search">Search</string>
 </resources>
