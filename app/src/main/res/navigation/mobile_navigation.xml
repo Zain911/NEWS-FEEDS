@@ -25,7 +25,7 @@
         android:label="@string/app_name" >
         <argument
             android:name="articleDetails"
-            app:argType="com.example.example.Article" />
+            app:argType="com.example.news_feeds.data.model.Article" />
     </fragment>
     <fragment
         android:id="@+id/noConnectionFragment"
