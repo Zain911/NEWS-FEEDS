@@ -39,7 +39,7 @@ class ArticleDetailsFragment : Fragment() {
         binding.titleTextView.text = article.title
         binding.descriptionTextView.text = article.description
         binding.publishAtTextView.text = Util.dateFormat(article.publishedAt.toString())
-        binding.authorByTextView.text = "${context?.getString(R.string.by)}${article.author}"
+        binding.authorByTextView.text = "${context?.getString(R.string.by)} ${article.author}"
 
         Glide.with(binding.articleCompatImageView.context)
             .load(article.urlToImage)
@@ -48,6 +48,8 @@ class ArticleDetailsFragment : Fragment() {
 
     }
     private fun openWebsite(url: String?) {
+
+
         val defaultBrowser =
             Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_BROWSER)
         defaultBrowser.data = Uri.parse(url)

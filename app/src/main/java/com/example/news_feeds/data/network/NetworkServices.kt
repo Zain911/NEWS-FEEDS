@@ -7,9 +7,9 @@ import retrofit2.http.GET
 interface NetworkServices {
 
     @GET("articles?source=the-next-web")
-    suspend fun getArticlesWeb(
+    suspend fun getWebArticles(
     ): Response<ArticlesResponse>
 
     @GET("articles?source=associated-press")
-    suspend fun getArticlePress(): Response<ArticlesResponse>
+    suspend fun getPressArticles(): Response<ArticlesResponse>
 }

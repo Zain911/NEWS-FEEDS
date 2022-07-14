@@ -3,6 +3,7 @@ package com.example.news_feeds.di
 
 import com.example.news_feeds.data.repository.ArticlesRepository
 import com.example.news_feeds.data.network.NetworkServices
+import com.example.news_feeds.data.repository.ArticlesRepositoryInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +16,7 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideArticlesRepository(networkServices: NetworkServices) : ArticlesRepository {
+    fun provideArticlesRepository(networkServices: NetworkServices) : ArticlesRepositoryInterface {
         return ArticlesRepository(networkServices)
     }
 

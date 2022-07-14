@@ -38,9 +38,10 @@ class ArticlesAdapter(
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.view.authorByTextView.text =
-            context.getString(R.string.by) + articlesList[position].author
+            context.getString(R.string.by) + " " + articlesList[position].author
 
-        holder.view.publishTimeTextView.text = Util.dateFormat(articlesList[position].publishedAt.toString())
+        holder.view.publishTimeTextView.text =
+            Util.dateFormat(articlesList[position].publishedAt.toString())
 
         holder.view.titleTextView.text = articlesList[position].title
         Glide.with(holder.view.articleCompatImageView.context)

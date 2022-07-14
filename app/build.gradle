@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "apiKey", '"533af958594143758318137469b41ba9"'
+        buildConfigField "String", "apiKey", '"97c6265c6217404eb2bb0807ee82c5f8"'
         buildConfigField "String", "BaseUrl", '"https://newsapi.org/v1/"'
     }
 

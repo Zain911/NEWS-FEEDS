@@ -1,7 +1,7 @@
 package com.example.news_feeds.domain.usecase
 
 import com.example.news_feeds.data.model.Article
-import com.example.news_feeds.data.repository.ArticlesRepository
+import com.example.news_feeds.data.repository.ArticlesRepositoryInterface
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -9,7 +9,7 @@ import kotlinx.coroutines.awaitAll
 import javax.inject.Inject
 
 
-class CombineArticlesUseCase @Inject constructor(private val articlesRepository: ArticlesRepository) {
+class CombineArticlesUseCase @Inject constructor(private val articlesRepository: ArticlesRepositoryInterface) {
     private val webArticles = CoroutineScope(Dispatchers.IO).async {
         articlesRepository.getWebArticles().body()?.articles
     }

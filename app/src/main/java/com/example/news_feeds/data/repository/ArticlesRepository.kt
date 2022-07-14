@@ -7,11 +7,11 @@ class ArticlesRepository @Inject constructor(private val networkServices: Networ
     ArticlesRepositoryInterface {
 
     override suspend fun getWebArticles() =
-        networkServices.getArticlesWeb()
+        networkServices.getWebArticles()
 
 
     override suspend fun getPressArticles() =
-        networkServices.getArticlePress()
+        networkServices.getPressArticles()
 
 
 }
