@@ -11,9 +11,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import com.example.example.Articles
 import com.example.news_feeds.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
@@ -22,7 +24,7 @@ class HomeFragment : Fragment() {
     private val viewModel: HomeViewModel by viewModels()
 
     private val binding get() = _binding!!
-
+    private lateinit var articlesAdapter: ArticlesAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,11 +32,19 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        Toast.makeText(context, "Here in Home", Toast.LENGTH_SHORT).show()
+        articlesAdapter = ArticlesAdapter(arrayListOf()) {
+
+        }
+
+        viewModel.articlesList.observe(viewLifecycleOwner) {
+            if (it.isNotEmpty())
+                articlesAdapter.changeList(it as MutableList<Articles>)
+        }
+        binding.articleRecyclerView.adapter = articlesAdapter
         viewLifecycleOwner.lifecycleScope.launch {
-            val x=viewModel.getArticles()
+            val x = viewModel.getArticles()
             Log.d("HomeArticles: ",
-               x.toString() )
+                x.toString())
         }
 
         return root
