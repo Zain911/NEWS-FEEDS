@@ -3,11 +3,14 @@ package com.example.news_feeds.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.news_feeds.domain.CombineArticlesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(private val articlesUseCase: CombineArticlesUseCase) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+   suspend fun getArticles()=
+        articlesUseCase.getArticles()
+
 }
