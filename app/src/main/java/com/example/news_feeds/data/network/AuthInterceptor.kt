@@ -1,4 +1,4 @@
-package com.example.weatherphoto.data.network
+package com.example.news_feeds.data.network
 
 
 import com.example.news_feeds.BuildConfig

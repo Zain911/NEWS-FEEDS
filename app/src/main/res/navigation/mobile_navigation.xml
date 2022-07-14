@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/noConnectionFragment"
-        android:name="com.example.weatherphoto.ui.main.NoConnectionFragment"
+        android:name="com.example.news_feeds.ui.connection.NoConnectionFragment"
         android:label="@string/no_connection" />
 
 </navigation>

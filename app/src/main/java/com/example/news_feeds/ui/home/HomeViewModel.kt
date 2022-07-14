@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.example.Article
+import com.example.news_feeds.data.model.Article
 import com.example.news_feeds.domain.usecase.CombineArticlesUseCase
 import com.example.news_feeds.domain.util.InternetConnectivity
 import dagger.hilt.android.lifecycle.HiltViewModel

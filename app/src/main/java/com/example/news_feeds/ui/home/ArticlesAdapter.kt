@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.example.Article
+import com.example.news_feeds.data.model.Article
 import com.example.news_feeds.R
 import com.example.news_feeds.databinding.ItemArticleBinding
 import com.example.news_feeds.domain.util.Util

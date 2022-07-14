@@ -1,7 +1,7 @@
-package com.example.weatherphoto.di
+package com.example.news_feeds.di
 
 import com.example.news_feeds.BuildConfig.BaseUrl
-import com.example.weatherphoto.data.network.AuthInterceptor
+import com.example.news_feeds.data.network.AuthInterceptor
 import com.example.news_feeds.data.network.NetworkServices
 import com.google.gson.GsonBuilder
 import dagger.Module

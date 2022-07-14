@@ -1,4 +1,4 @@
-package com.example.weatherphoto.ui.main
+package com.example.news_feeds.ui.connection
 
 import android.annotation.SuppressLint
 import android.os.Bundle

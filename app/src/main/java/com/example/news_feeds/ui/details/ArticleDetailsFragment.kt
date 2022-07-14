@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.example.example.Article
+import com.example.news_feeds.data.model.Article
 import com.example.news_feeds.R
 import com.example.news_feeds.databinding.FragmentArticleDetailsBinding
 import com.example.news_feeds.domain.util.Util
